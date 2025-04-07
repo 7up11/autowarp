@@ -1,0 +1,5 @@
+path: random-overlay
+train: train/images
+val: val/images
+names:
+  0: quad
