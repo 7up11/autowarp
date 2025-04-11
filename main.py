@@ -179,24 +179,3 @@ if __name__ == "__main__":
     root = InputWindow("runs/segment/filtered-5e/weights/best.pt")
     root.mainloop()
 
-
-# image = "datasets/coco2017/val/images/000000195918.jpg"
-# result = YOLO("runs/segment/filtered-5e/weights/best.pt")(image)[0]
-# masks = YOLO("runs/segment/filtered-5e/weights/best.pt")(image)[0].masks.xyn
-# image = cv.imread(image)
-# contours = [
-#     normal_to_image(image.shape, simplify(rdp(mask, 0.01))) for mask in masks
-# ]
-#
-# for i, contour in enumerate(contours):
-#     image = cv.polylines(image, [contour], True, (255, 0, 0))
-#     image = cv.putText(image, str(i), contour[0], cv.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0))
-# cv.imshow("image", image)
-# while True:
-#     key = cv.waitKey(1) & 0xFF
-#     if key == ord("q"):
-#         break
-#
-# dst = np.array([[0, 0], [0, 300], [500, 300], [500, 0]])
-# plt.imshow(warp(image, contours[2], dst))
-
